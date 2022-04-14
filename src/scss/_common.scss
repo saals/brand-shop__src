@@ -43,9 +43,26 @@ a {
   border: 1px solid $accent;
   text-align: center;
   cursor: pointer;
+
+  &--shopping {
+    width: 235px;
+    @include font(14px, 17px, 300);
+    text-transform: uppercase;
+    border-color: #a4a4a4;
+
+    @include media-max-width() {
+      width: auto;
+      font-size: 12px;
+    }
+  }
+  &--accent {
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $accent;
+  }
 }
 .page-heading {
-  // margin-bottom: 64px;
   min-height: 148px;
   background: #f8f3f4;
 }
@@ -54,4 +71,8 @@ a {
   line-height: 148px;
   color: $accent;
   text-transform: uppercase;
+
+  @include mobile-width {
+    text-align: center;
+  }
 }
