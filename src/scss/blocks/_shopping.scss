@@ -7,9 +7,26 @@
   min-height: 998px;
   padding-top: 96px;
   padding-bottom: 96px;
+
+  @media (max-width: 992px) {
+    min-height: auto;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 59px;
+    padding-bottom: 59px;
+  }
 }
 .shopping__cart {
-  width: 652px;
+  width: 57.2%;
+
+  @media (max-width: 992px) {
+    width: calc(100% - 380px);
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 64px;
+  }
 }
 .shopping__list {
   margin: 0 0 72px;
@@ -22,8 +39,12 @@
 .shop-card {
   position: relative;
   display: flex;
-  padding-right: 70px;
+  padding-right: 68px;
   box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+  @media (max-width: 992px) {
+    padding-right: 40px;
+  }
 
   &::before {
     position: absolute;
@@ -37,6 +58,10 @@
 }
 .shop-card__img-wrap {
   margin-right: 31px;
+
+  @media (max-width: 992px) {
+    margin-right: 20px;
+  }
 }
 .shop-card__img {
   display: block;
@@ -50,12 +75,23 @@
   line-height: 29px;
   text-transform: uppercase;
   color: $black;
+
+  @media (max-width: 992px) {
+    margin: 0 0 37px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 .shop-card__list {
   margin: 0;
   font-size: 22px;
   line-height: 26px;
   color: #575757;
+
+  @media (max-width: 992px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 .shop-card__item {
   margin-bottom: 6px;
@@ -75,25 +111,33 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
-}
-.button {
-  &--shopping {
-    width: 235px;
-    @include font(14px, 17px, 300);
-    text-transform: uppercase;
-    border-color: #a4a4a4;
+
+  @include tablet-width {
+    justify-content: space-evenly;
   }
-  &--accent {
+}
+.shopping__info {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: $accent;
+  }
+  @include media-max-width() {
+    flex-direction: column;
+    align-items: center;
   }
 }
 .shopping__address {
   width: 360px;
   margin-bottom: 37px;
   margin-top: 16px;
+
+  @include tablet-width {
+    width: 48.8%;
+  }
+  @include media-max-width() {
+    width: 360px;
+  }
 
   fieldset {
     display: flex;
@@ -128,6 +172,16 @@
   padding: 42px;
   background: #f5f3f3;
   text-align: center;
+
+  @include tablet-width {
+    width: 48.8%;
+    margin-top: 55px;
+    height: min-content;
+  }
+  @include media-max-width {
+    width: 360px;
+    margin-top: 0;
+  }
 }
 .checkout__list {
   margin: 0 0 17px;
@@ -136,13 +190,14 @@
 }
 .checkout__item {
   text-align: right;
+  text-transform: uppercase;
+
   &:first-child {
     @include font(11px, 13px);
     margin-bottom: 12px;
   }
   &:last-child {
     @include font(16px, 19px, 300);
-    text-transform: uppercase;
 
     .checkout__desk {
       font-weight: 700;

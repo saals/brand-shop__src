@@ -20,15 +20,25 @@
   justify-content: space-between;
   align-items: center;
   min-height: inherit;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 .subscribe__quote {
-  width: 30%;
+  width: 360px;
   margin: 0;
   font-style: italic;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: $black;
+
+  @media (max-width: 768px) {
+    margin-bottom: 48px;
+  }
 }
 .subscribe__visitor {
   display: block;
@@ -40,7 +50,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 50%;
+  width: 557px;
+
+  @include media-max-width() {
+    width: 100%;
+  }
 }
 .subscribe__title,
 .subscribe__text {
@@ -70,6 +84,9 @@
   border: none;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  @include media-max-width() {
+    width: 238px;
+  }
 }
 .subscribe__button {
   padding: 0 22px;

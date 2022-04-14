@@ -16,6 +16,9 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  @include mobile-width {
+    margin: 0;
+  }
 }
 .header__burger-icon,
 .header__user-icon,
@@ -30,10 +33,16 @@
 }
 .header__user {
   margin: 0 33px 0 0;
+  @include mobile-width {
+    display: none;
+  }
 }
 .header__cart {
   position: relative;
   display: inline-block;
+  @include mobile-width {
+    display: none;
+  }
 }
 .header__cart::before {
   position: absolute;
