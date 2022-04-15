@@ -1,5 +1,11 @@
 .offers {
   margin-bottom: 67px;
+  @include tablet-width {
+    margin-bottom: 133px;
+  }
+  @include mobile-width {
+    margin-bottom: 32px;
+  }
 }
 .offers__list {
   display: flex;
@@ -13,10 +19,25 @@
   width: 31.6%;
   min-height: 260px;
   margin: 0 0 30px;
+  @include tablet-width {
+    min-height: 167px;
+    margin: 0 0 20px;
+  }
+  @include mobile-width {
+    width: 100%;
+    min-height: 247px;
+    margin: 0 0 32px;
+  }
 }
 .offers__item:last-child {
   width: 100%;
   min-height: 180px;
+  @include tablet-width {
+    min-height: 116px;
+  }
+  @include mobile-width {
+    min-height: 111px;
+  }
 }
 .offers__item--1 {
   background: rgba(33, 22, 22, 0.7) url(../img/for-fomen.jpg) center top no-repeat;

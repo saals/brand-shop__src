@@ -8,6 +8,12 @@
   margin: 0;
   padding: 103px 0;
   list-style: none;
+  @include tablet-width {
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0 64px;
+    min-height: 610px;
+  }
 }
 .advantage__item {
   display: flex;
@@ -17,6 +23,12 @@
   width: 31.6%;
   padding: 0 22px;
   text-align: center;
+  @include tablet-width {
+    width: 48.8%;
+  }
+  @include mobile-width {
+    width: 100%;
+  }
 }
 .advantage__icon {
   margin-bottom: auto;
