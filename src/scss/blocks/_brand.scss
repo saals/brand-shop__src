@@ -6,6 +6,9 @@
   @include tablet-width {
     margin-bottom: 20px;
   }
+  @include mobile-width {
+    margin-bottom: 64px;
+  }
 }
 
 .brand__overlay {
@@ -22,8 +25,10 @@
 }
 .brand__image {
   width: 50%;
-  /* background-color: rgba(113, 103, 105, 0.08); */
   background-color: #f4f3f3;
+  @include mobile-width {
+    display: none;
+  }
 }
 .brand__image > img {
   display: block;
@@ -33,6 +38,10 @@
   display: flex;
   width: 50%;
   margin: auto;
+  @include mobile-width {
+    width: 100%;
+    min-height: 363px;
+  }
 }
 .brand__title {
   position: relative;
@@ -53,11 +62,17 @@
     width: 12px;
     height: 92px;
     background: $accent;
+    @include mobile-width {
+      height: 61px;
+    }
   }
-
   @include tablet-width {
     @include font(44px, 53px, 900);
     margin-left: 40px;
+  }
+  @include mobile-width {
+    @include font(39px, 46px, 900);
+    margin: auto;
   }
 }
 .brand__subtitle {
@@ -67,6 +82,9 @@
   line-height: 38px;
   @include tablet-width {
     @include font(24px, 29px, 700);
+  }
+  @include mobile-width {
+    @include font(20px, 24px, 700);
   }
 }
 .brand__subtitle > span {

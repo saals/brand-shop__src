@@ -26,6 +26,9 @@
   @include tablet-width {
     width: 48.8%;
   }
+  @include mobile-width {
+    width: 100%;
+  }
 }
 .advantage__icon {
   margin-bottom: auto;

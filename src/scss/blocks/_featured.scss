@@ -21,6 +21,9 @@
   @include tablet-width {
     margin-bottom: 72px;
   }
+  @include mobile-width {
+    margin-bottom: 64px;
+  }
 }
 .featured__list {
   display: flex;
@@ -36,6 +39,9 @@
   @include tablet-width {
     width: 48.8%;
     margin-bottom: 16px;
+  }
+  @include mobile-width {
+    width: 100%;
   }
 }
 .card {
