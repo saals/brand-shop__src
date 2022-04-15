@@ -4,12 +4,28 @@
   min-height: 675px;
   padding-top: 64px;
   padding-bottom: 64px;
+
+  @include tablet-width {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 651px;
+  }
+  @include mobile-width {
+    flex-direction: column;
+  }
 }
 .registration__form {
   width: 360px;
   margin-right: 22px;
   font-weight: 300;
   color: #b1b1b1;
+  flex-shrink: 0;
+
+  @include mobile-width {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 }
 .registration__form fieldset {
   display: flex;
@@ -66,6 +82,10 @@
 }
 .registration__text {
   width: 652px;
+
+  @include mobile-width {
+    width: 100%;
+  }
 }
 .button_registration {
   width: 167px;
@@ -89,12 +109,20 @@
   font-size: 24px;
   line-height: 29px;
   color: #000000;
+
+  @include tablet-width {
+    @include font(16px, 19px, 300);
+  }
 }
 .loyalty__title {
   margin: 0 0 22px;
   font-weight: inherit;
   font-size: inherit;
   text-transform: uppercase;
+
+  @include tablet-width {
+    margin-bottom: 32px;
+  }
 }
 .loyalty__desc {
   margin: 0 0 21px;
@@ -105,9 +133,14 @@
   list-style: none;
 }
 .loyalty__item {
-  /* padding-left: 42px; */
+  display: flex;
+  align-items: baseline;
   margin-bottom: 15px;
+  @include tablet-width {
+    margin-bottom: 23px;
+  }
 }
 .loyalty__item svg {
   margin-right: 22px;
+  flex-shrink: 0;
 }

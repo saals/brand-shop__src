@@ -53,7 +53,7 @@ gulp.task('clean', function () {
 
 gulp.task("serve", gulp.series('clean', 'copy', 'html', 'img', 'sass', function () {
   browserSync.init({
-    server: "build"
+    server: "build", browser: "firefox"
   });
   gulp.watch("src/scss/**/*.scss", gulp.parallel("sass"));
   gulp.watch("src/*.html", gulp.parallel("html"));
