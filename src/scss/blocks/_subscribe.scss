@@ -3,6 +3,9 @@
   min-height: 448px;
   background: url(../img/bg-subscribe.jpg) no-repeat;
   background-size: cover;
+  @include tablet-width {
+    min-height: 614px;
+  }
 }
 .subscribe::before {
   position: absolute;
@@ -25,6 +28,7 @@
     flex-direction: column;
     padding-top: 64px;
     padding-bottom: 64px;
+    justify-content: start;
   }
 }
 .subscribe__quote {
