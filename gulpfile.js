@@ -19,7 +19,8 @@ gulp.task('sass', function () {
       overrideBrowserslist: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(sourceMaps.write())
+    // .pipe(sourceMaps.write())
+    .pipe(sourceMaps.write('../maps'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
