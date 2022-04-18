@@ -1,0 +1,25 @@
+.text-accent {
+  color: $accent;
+}
+
+.carousel-control-color {
+  fill: $black;
+  background: rgba(42, 42, 42, 0.15);
+}
+.carousel-control-next:hover {
+  .carousel-control-color {
+    fill: $accent;
+    transition: 0.2s ease-out;
+  }
+}
+.carousel-control-prev:hover {
+  .carousel-control-color {
+    fill: $accent;
+    transition: 0.2s ease-out;
+  }
+}
+.product-desc {
+  position: relative;
+  margin-top: -48px;
+  background: #fff;
+}
