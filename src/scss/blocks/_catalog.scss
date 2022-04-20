@@ -2,16 +2,32 @@
 }
 
 .catalog__filters {
+  position: relative;
+
   display: flex;
   padding: 51px 0;
+
+  @include mobile-width {
+    justify-content: space-between;
+  }
 }
 
 .catalog__filter-menu {
-  position: relative;
+  // position: relative;
   z-index: 1;
-
   width: 31.5%;
   margin-right: 30px;
+
+  @include mobile-width {
+    width: auto;
+  }
+
+  & > .filter svg {
+    @include mobile-width {
+      width: 38px;
+      height: 25px;
+    }
+  }
 }
 
 .filter {
@@ -32,6 +48,16 @@
 
   svg {
     margin-left: 11px;
+
+    @include mobile-width {
+      margin-left: 0;
+    }
+  }
+
+  span {
+    @include mobile-width {
+      display: none;
+    }
   }
 }
 .filter-group {
@@ -40,18 +66,31 @@
     margin-right: 22px;
     @include font(14px, 17px);
     opacity: 0.7;
+
+    @include mobile-width {
+      @include font(12px, 14px);
+      margin-right: 0;
+    }
   }
 }
 
 .filter-menu {
   position: absolute;
-  top: 0;
+  top: 51px;
   left: 0;
-  width: 100%;
+  width: 31.5%;
   padding: 0 15px;
   background: #fff;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   display: none;
+
+  @include tablet-width {
+    width: 48%;
+  }
+
+  @include mobile-width {
+    width: 100%;
+  }
 
   &:hover {
     display: block;
@@ -121,6 +160,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+
+  @include tablet-width {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mobile-width {
+    grid-template-columns: 1fr;
+  }
 }
 
 .catalog__item {
