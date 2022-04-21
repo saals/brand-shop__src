@@ -170,6 +170,11 @@
 }
 
 .catalog__item {
+  @include tablet-width {
+    &:nth-child(n + 9) {
+      display: none;
+    }
+  }
 }
 
 .pagination {
